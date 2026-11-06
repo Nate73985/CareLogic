@@ -1,7 +1,7 @@
 import { media } from './media';
 export const site = {
   companyName: 'CareLogic Health Services, LLC', tagline: 'Compassion in Every Touch.',
-  domain: 'https://carelogichealth.com', email: 'info@carelogichealth.com',
+  domain: process.env.NEXT_PUBLIC_SITE_URL || 'https://carelogichealth.com', email: 'info@carelogichealth.com',
   // Provisional contact details supplied by the client; verify before public launch.
   phone: '(617) 336-3144',
   address: '150 Grossman Drive, Suite 203, Braintree, MA 02184',

@@ -1,7 +1,7 @@
 // All image, logo and video references belong here. Public paths omit /public.
 const stock = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1600&q=85`;
 export type MediaImage = { src: string; alt: string; position?: string; stock?: boolean };
-export const media = {
+const mediaConfig = {
   logo: { src: '', alt: 'CareLogic Health Services, LLC — Compassion in Every Touch.', width: 260, height: 76 },
   hero: { src: stock('photo-1576765608535-5f04d1e3f289'), alt: 'Care professional offering attentive support to an older adult', position: 'center', stock: true },
   about: { src: stock('photo-1584515933487-779824d29309'), alt: 'Healthcare professional listening with care', stock: true },
@@ -16,3 +16,10 @@ export const media = {
   video: { src: '', poster: { src: stock('photo-1576765608535-5f04d1e3f289'), alt: 'Illustrative scene of compassionate support', stock: true }, captions: '', captionLanguage: 'en' },
   fallback: { src: '/images/media-fallback.svg', alt: 'CareLogic — compassionate care at home' },
 } satisfies { logo: {src: string; alt: string; width: number; height: number}; hero: MediaImage; about: MediaImage; services: Record<string, MediaImage>; video: {src: string; poster: MediaImage; captions: string; captionLanguage: string}; fallback: MediaImage };
+// Next Link handles basePath automatically; public media paths need this prefix.
+function withBasePath<T>(value:T):T {
+  if(typeof value==='string') return (value.startsWith('/') ? `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${value}` : value) as T;
+  if(value && typeof value==='object') return Object.fromEntries(Object.entries(value).map(([key,entry])=>[key,withBasePath(entry)])) as T;
+  return value;
+}
+export const media = withBasePath(mediaConfig);
