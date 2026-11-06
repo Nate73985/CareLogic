@@ -4,7 +4,7 @@ The repository includes `.github/workflows/pages.yml`. Once Pages is enabled wit
 
 https://nate73985.github.io/CareLogic/
 
-GitHub Pages availability depends on repository visibility and the owner's plan. The current account rejected enabling Pages for this private repository; making source public requires owner approval, or a supported paid GitHub plan.
+The owner approved making the repository public for free GitHub Pages hosting. Pages is configured to deploy from GitHub Actions.
 
 ## Build locally
 
@@ -25,3 +25,4 @@ The builder copies source to the ignored `.pages-build/` directory, excludes ser
 - Do not upload `.env.local`, resumes, private data, or credentials to Pages. The workflow requires no external service secrets; it uses GitHub's scoped deployment token.
 
 No custom domain or DNS configuration is required for the github.io address.
+

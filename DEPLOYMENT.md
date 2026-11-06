@@ -1,6 +1,6 @@
 # Deployment preparation — approval required before publishing
 
-Recommended target: Vercel using the Next.js preset and Node.js runtime. Source is hosted in the private repository https://github.com/Nate73985/CareLogic. The website has not been deployed.
+Recommended target: Vercel using the Next.js preset and Node.js runtime. Source is hosted in the public repository https://github.com/Nate73985/CareLogic. GitHub Pages deployment is configured; see `GITHUB_PAGES.md` for static hosting.
 
 ## Before launch
 
@@ -25,6 +25,7 @@ Recommended target: Vercel using the Next.js preset and Node.js runtime. Source 
 6. Check HTTPS, headers, metadata, canonical URLs, sitemap, robots, redirects, mobile navigation, keyboard focus, and video modal. Test real MP4 and captions when supplied.
 
 Only after approval connect `carelogichealth.com` and change DNS. Set `SITE_URL` to that exact origin and verify the canonical host redirects. Confirm credentials in the actual production environment, then repeat synthetic delivery tests. Do not claim operational readiness until they pass.
+
 
 
 
