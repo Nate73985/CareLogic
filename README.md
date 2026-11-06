@@ -1,6 +1,6 @@
 # CareLogic Health
 
-Next.js App Router + TypeScript + Tailwind CSS, Lucide icons, and reduced-motion-aware Framer Motion. All twelve requested pages are included. This project is local only; nothing has been published or pushed.
+Next.js App Router + TypeScript + Tailwind CSS, Lucide icons, and reduced-motion-aware Framer Motion. All twelve requested pages are included. Source repository: https://github.com/Nate73985/CareLogic (private). The website has not been deployed.
 
 ## Run locally
 
@@ -49,5 +49,6 @@ Contact details remain hidden until verified. The map appears only when the addr
 ## Verification
 
 Build and type checking should pass before deployment. Inspect navigation at 390, 768 and 1440 pixels; test all service links, FAQ details, the mobile menu, the skip link, and video dialog keyboard behavior. Follow `DEPLOYMENT.md` for provider delivery tests. Live delivery cannot be certified without configured credentials and inbox verification.
+
 
 
