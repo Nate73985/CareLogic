@@ -1,0 +1,6 @@
+import { CTA, PageHero, Values } from '@/components/content';
+import { Photo } from '@/components/ui';
+import { media } from '@/config/media';
+import { mission, commitment } from '@/config/site';
+export const metadata={title:'About Us',description:'Our mission is compassionate, dependable home healthcare centered on dignity, independence, and family support.',alternates:{canonical:'/about'}};
+export default function About(){return <><PageHero eyebrow="The heart of CareLogic" title="People first. Always." description="We believe feeling cared for starts with feeling understood. That belief shapes every conversation, every care plan, and every connection."/><section className="section split"><Photo asset={media.about}/><div><p className="eyebrow">Our mission</p><h2>At home in a<br/>more caring world.</h2><p>{mission}</p><p>{commitment}</p></div></section><section className="section"><p className="eyebrow">Our philosophy</p><h2>Listen closely. Care thoughtfully.</h2><p className="lead">Home is more than an address. It is familiar routines, personal choices, and the people who matter. Our approach respects those connections while supporting the individual needs of each person and family.</p><Values/></section><CTA/></>}
